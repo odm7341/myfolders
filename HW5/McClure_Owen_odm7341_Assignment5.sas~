@@ -1,6 +1,8 @@
 %let dirdata=/folders/myfolders/HW4/;
 LIBNAME save "&dirdata";
 
+/********* 1 ***********/
+*a;
 
 %macro p5am;
 	title "Listing of first 5 records from library &lib, member &dsn,";
