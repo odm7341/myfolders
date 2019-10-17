@@ -116,32 +116,15 @@ proc transpose data=snow1a out=snow1Year name=name;
 data snow1Year;
 	set snow1Year;
 	drop name;
-	array COL{9};
-	Snowfall = 0;
+	inputSnowfall;
 	do i = 1 to 9;
 		Snowfall = COL{i} + Snowfall;
 	end;
-	drop COL1 - COL9 i;
 
 proc print; run;
 
 
-*d;
-proc sgplot data=snow1a;
-	title "Snowfall by Month";
-	vbox Snowfall / grouporder=data group=Month;
-	keylegend / title="Month";
-run;
 
-
-/********* 4 ***********/
-*a;
-
-data tb2000m1;
-	set save.tb2000;
-	
-	
-proc print;run;
 
 
 
