@@ -1,0 +1,10 @@
+%let dirdata=/folders/myfolders/HW4/;
+LIBNAME save "&dirdata";
+
+
+%macro p5am;
+	title "Listing of first 5 records from library &lib, member &dsn,";
+	title2 "on &sysday, &sysdate..";
+	proc print data=&lib..&dsn (obs=5);run;
+	title;
+%mend p5am;
