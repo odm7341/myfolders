@@ -22,3 +22,8 @@ LIBNAME save "&dirdata";
 
 
 %pam2(lib=save, dsn=tb2000, obs=3, fobs=11);
+
+/********* 2 ***********/
+
+
+
