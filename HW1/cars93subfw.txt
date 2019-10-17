@@ -1,0 +1,20 @@
+ [1]      BuickMidsize15.7  2231110    USA
+ [2]      Buick  Large23.7  1625180    USA
+ [3]   CadillacMidsize40.1  1625295    USA
+ [4]  Chevrolet Sporty15.1  1928160    USA
+ [5]   Chrylser  Large18.4  2028153    USA
+ [6]      Dodge  Small 9.2  2933 92    USA
+ [7]      Dodge  Small11.3  2329 93    USA
+ [8]      Dodge    Van19.0  1721142    USA
+ [9]      Eagle  Small12.2  2933 92    USA
+[10]      Eagle  Large19.3  2028214    USA
+[11]       Ford  Small10.1  2330127    USA
+[12]       FordCompact11.3  2227 96    USA
+[13]       FordMidsize20.2  2130140    USA
+[14]        Geo Sporty12.5  3036 90non-USA
+[15]      LexusMidsize28.0  1824185non-USA
+[16]      Mazda  Small 8.3  2937 82non-USA
+[17]      Mazda Sporty32.5  1725255non-USA
+[18]     NissanCompact15.7  2430150non-USA
+[19] OldsmobileCompact13.5  2431155    USA
+[20]    Pontiac  Small 9.0  3141 74    USA

@@ -1,0 +1,40 @@
+
+    Candy sales report for Adriana from classroom 21
+
+    Congratulations!  You sold 7 boxes of candy
+    and earned  $8.75 for our field trip.
+
+    Candy sales report for Nathan from classroom 14
+
+    Congratulations!  You sold 19 boxes of candy
+    and earned $23.75 for our field trip.
+
+    Candy sales report for Matthew from classroom 14
+
+    Congratulations!  You sold 14 boxes of candy
+    and earned $17.50 for our field trip.
+
+    Candy sales report for Claire from classroom 14
+
+    Congratulations!  You sold 11 boxes of candy
+    and earned $13.75 for our field trip.
+
+    Candy sales report for Ian from classroom 21
+
+    Congratulations!  You sold 18 boxes of candy
+    and earned $22.50 for our field trip.
+
+    Candy sales report for Chris from classroom 14
+
+    Congratulations!  You sold 6 boxes of candy
+    and earned  $7.50 for our field trip.
+
+    Candy sales report for Anthony from classroom 21
+
+    Congratulations!  You sold 13 boxes of candy
+    and earned $16.25 for our field trip.
+
+    Candy sales report for Erika from classroom 21
+
+    Congratulations!  You sold 17 boxes of candy
+    and earned $21.25 for our field trip.

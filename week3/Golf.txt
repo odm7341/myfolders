@@ -1,0 +1,7 @@
+CourseName	NumberOfHoles	Par	Yardage	GreenFees
+Kapalua Plantation	18	73	7263	125
+Pukalani	18	72	6945	55
+Sandlewood	18	72	6469	35
+Silversword	18	71		57
+Waiehu Municipal	18	72	6330	25
+Grand Waikapa	18	72	6122	200
