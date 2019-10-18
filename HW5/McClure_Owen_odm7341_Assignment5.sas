@@ -43,35 +43,67 @@ proc print data=chruchdatasub; run;
 
 *b / c;
 
-%macro p5m3(data=_LAST_, nobs=5);
+%macro p5m3(data=_LAST_, nobs=5, vars=date receiver amount);
 	proc print data=&data (obs=&nobs);
 	title "First &nobs listings of dataset &data, with lastname &lname from &state";
-	var date receiver amount;
+	var &vars;
 	run;
 %mend p5m3;
 
-%p5m3(nobs = 3);
+%p5m3(nobs = 5);
 
 *d;
 
-%macro donor(lname=, state=, data=_LAST_, nobs=5);
-	data &lname&state
+%macro donor(lname=, state=, data=_LAST_, nobs=5, vars=);
+	data &lname&state;
 		set &data;
 		if state = "&state";
 		if upcase(LastNamePart) = upcase("&lname");
 		zip = substr(zip,2,6);
 		
-	proc print data=&data (obs=&nobs);
-		title "First &nobs listings of dataset &lname&state, created from &data using &lname from &state";
-		var date receiver amount;
+	proc print data=&lname&state (obs=&nobs);
+		title "First &nobs listings of dataset &lname&state, created from &data";
+		var &vars;
 		run;		
 %mend donor;
 
-%donor(lname=Church, state=MA, data=save.churchdata)
+*e;
 
+%donor(lname=Churchill, state=VA, data=save.churchdata, vars=date receiver amount);
 
-	
+%donor(lname=Churchill, state=PA, data=save.churchdata, vars=date receiver amount);
 
+/********* 3 ***********/
+
+*a;
+
+data _null_;
+	retain sumP;
+	set save.profits end=eof;
+	if _n_=1 then do;
+		call symput('y1',year);
+		****changed to symputx so that the macrovariable is trimmed****************;
+		call symputx('q1',qtr);
+	end;
+	sumP+profit;
+	if eof then do;
+		call symput('y2',year);
+		****changed to symputx so that the macrovariable is trimmed****************;
+		call symputx('q2',qtr);
+		call symput('sumProfit',sumP);
+		sumPNice=put(sumP,dollar7.);
+		call symput('sumProfitNice',sumPNice);
+		thisDay=put(date(),worddate18.);
+		call symput('tdDate1',thisDay);
+	end;
+run;
+
+*******Added the . after the variables to that SAS knows its a delimimator**************;
+title "Based on data from Q&q1. &y1 to Q&q2. &y2:";
+title2 "Total profits are &sumProfitNice.. Great work, everyone!";
+title3 "Report produced &tdDate1 (%sysfunc(date(),mmddyy8.)).";
+proc print data=save.profits;run;
+title;
 
 
 
