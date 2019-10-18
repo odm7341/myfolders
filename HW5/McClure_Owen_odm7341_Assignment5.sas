@@ -54,11 +54,20 @@ proc print data=chruchdatasub; run;
 
 *d;
 
-%macro donor(lname=, state=, data=_LAST_, vars=, nobs=5);
+%macro donor(lname=, state=, data=_LAST_, nobs=5);
 	data &lname&state
 		set &data;
+		if state = "&state";
+		if upcase(LastNamePart) = upcase("&lname");
+		zip = substr(zip,2,6);
 		
+	proc print data=&data (obs=&nobs);
+		title "First &nobs listings of dataset &lname&state, created from &data using &lname from &state";
+		var date receiver amount;
+		run;		
 %mend donor;
+
+%donor(lname=Church, state=MA, data=save.churchdata)
 
 
 	
